@@ -1,11 +1,13 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, ArrowUp, Instagram, Linkedin, Twitter } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
@@ -28,7 +30,10 @@ const Index = () => {
             <a href="#signup" className="text-gray-700 hover:text-blue-600 transition-colors">Daftar</a>
           </nav>
           
-          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+          <Button 
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+            onClick={() => navigate('/skill-exchange')}
+          >
             Mulai Sekarang
           </Button>
         </div>
@@ -47,7 +52,11 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg"
+              onClick={() => navigate('/skill-exchange')}
+            >
               Bergabung Gratis
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-gray-300 hover:border-blue-600 px-8 py-4 text-lg">
@@ -76,7 +85,10 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6 border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-lg group">
+            <Card 
+              className="text-center p-6 border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-lg group cursor-pointer"
+              onClick={() => navigate('/skill-exchange')}
+            >
               <CardHeader>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-3xl">🔄</span>
@@ -276,7 +288,11 @@ const Index = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Bergabunglah dengan ribuan mahasiswa yang sudah mempercepat keterampilan mereka dengan SkillSwap. Mulai perjalanan Anda hari ini!
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-4 text-lg font-semibold">
+          <Button 
+            size="lg" 
+            className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-4 text-lg font-semibold"
+            onClick={() => navigate('/skill-exchange')}
+          >
             Mulai Belajar Hari Ini!
           </Button>
         </div>
