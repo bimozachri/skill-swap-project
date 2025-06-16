@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,9 +11,11 @@ const Index = () => {
       <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SS</span>
-            </div>
+            <img 
+              src="/lovable-uploads/5b54b9bc-9177-48ec-9d85-67f3b98721b5.png" 
+              alt="SkillSwap Logo" 
+              className="w-10 h-10"
+            />
             <span className="text-xl font-bold text-gray-900">SkillSwap</span>
           </div>
           
@@ -286,9 +287,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">SS</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/5b54b9bc-9177-48ec-9d85-67f3b98721b5.png" 
+                  alt="SkillSwap Logo" 
+                  className="w-10 h-10"
+                />
                 <span className="text-xl font-bold">SkillSwap</span>
               </div>
               <p className="text-gray-400">Connecting students for collaborative learning and skill development.</p>
