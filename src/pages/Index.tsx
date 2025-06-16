@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,15 +21,15 @@ const Index = () => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
-            <a href="#signup" className="text-gray-700 hover:text-blue-600 transition-colors">Sign Up</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Beranda</a>
+            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">Fitur</a>
+            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">Testimoni</a>
+            <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors">Harga</a>
+            <a href="#signup" className="text-gray-700 hover:text-blue-600 transition-colors">Daftar</a>
           </nav>
           
           <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-            Get Started
+            Mulai Sekarang
           </Button>
         </div>
       </header>
@@ -37,20 +38,20 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Learn New Skills with 
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Mentors & Study Buddies!</span>
+            Pelajari Keterampilan Baru dengan 
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Mentor & Teman Belajar!</span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Connect with experienced mentors and find the perfect study partners. SkillSwap helps students grow together through skill exchange, real projects, and gamified learning experiences.
+            Terhubung dengan mentor berpengalaman dan temukan teman belajar yang sempurna. SkillSwap membantu mahasiswa berkembang bersama melalui pertukaran keterampilan, proyek nyata, dan pengalaman belajar yang gamifikasi.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
-              Join for Free
+              Bergabung Gratis
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-gray-300 hover:border-blue-600 px-8 py-4 text-lg">
-              Watch Demo
+              Tonton Demo
             </Button>
           </div>
         </div>
@@ -68,9 +69,9 @@ const Index = () => {
       <section id="features" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose SkillSwap?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Mengapa Memilih SkillSwap?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover powerful features designed to accelerate your learning journey and connect you with the right people.
+              Temukan fitur-fitur canggih yang dirancang untuk mempercepat perjalanan belajar Anda dan menghubungkan Anda dengan orang-orang yang tepat.
             </p>
           </div>
           
@@ -80,10 +81,10 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-3xl">🔄</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Skill Exchange</CardTitle>
+                <CardTitle className="text-xl font-bold text-gray-900">Pertukaran Keterampilan</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Trade skills with fellow students. Teach what you know, learn what you need.</p>
+                <p className="text-gray-600">Tukar keterampilan dengan sesama mahasiswa. Ajarkan yang Anda kuasai, pelajari yang Anda butuhkan.</p>
               </CardContent>
             </Card>
             
@@ -92,10 +93,10 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-3xl">🎓</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Find a Mentor</CardTitle>
+                <CardTitle className="text-xl font-bold text-gray-900">Temukan Mentor</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Connect with experienced mentors in various fields to guide your learning path.</p>
+                <p className="text-gray-600">Terhubung dengan mentor berpengalaman di berbagai bidang untuk membimbing jalur belajar Anda.</p>
               </CardContent>
             </Card>
             
@@ -104,10 +105,10 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-3xl">🚀</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Real Projects</CardTitle>
+                <CardTitle className="text-xl font-bold text-gray-900">Proyek Nyata</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Practice skills with hands-on projects that build your portfolio and experience.</p>
+                <p className="text-gray-600">Praktikkan keterampilan dengan proyek langsung yang membangun portofolio dan pengalaman Anda.</p>
               </CardContent>
             </Card>
             
@@ -116,10 +117,10 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-3xl">🔥</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">Gamified Learning</CardTitle>
+                <CardTitle className="text-xl font-bold text-gray-900">Belajar Gamifikasi</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Stay motivated with challenges, rewards, and progress tracking that makes learning fun.</p>
+                <p className="text-gray-600">Tetap termotivasi dengan tantangan, hadiah, dan pelacakan kemajuan yang membuat belajar menyenangkan.</p>
               </CardContent>
             </Card>
           </div>
@@ -130,8 +131,8 @@ const Index = () => {
       <section id="testimonials" className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Students Say</h2>
-            <p className="text-xl text-gray-600">Real success stories from our community</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Apa Kata Mahasiswa</h2>
+            <p className="text-xl text-gray-600">Kisah sukses nyata dari komunitas kami</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -145,10 +146,10 @@ const Index = () => {
                   />
                   <div>
                     <h4 className="font-semibold text-gray-900">Sarah Chen</h4>
-                    <p className="text-sm text-gray-600">Computer Science Student</p>
+                    <p className="text-sm text-gray-600">Mahasiswa Ilmu Komputer</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"SkillSwap helped me find an amazing mentor who guided me through my first coding project. The gamified challenges kept me motivated throughout!"</p>
+                <p className="text-gray-700 italic">"SkillSwap membantu saya menemukan mentor luar biasa yang membimbing saya melalui proyek coding pertama. Tantangan gamifikasi membuat saya tetap termotivasi sepanjang waktu!"</p>
               </CardContent>
             </Card>
             
@@ -162,10 +163,10 @@ const Index = () => {
                   />
                   <div>
                     <h4 className="font-semibold text-gray-900">Marcus Johnson</h4>
-                    <p className="text-sm text-gray-600">Business Student</p>
+                    <p className="text-sm text-gray-600">Mahasiswa Bisnis</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"I traded my marketing skills for coding lessons. Now I can build my own websites! The skill exchange feature is brilliant."</p>
+                <p className="text-gray-700 italic">"Saya menukar keterampilan marketing dengan pelajaran coding. Sekarang saya bisa membuat website sendiri! Fitur pertukaran keterampilan benar-benar brilian."</p>
               </CardContent>
             </Card>
             
@@ -179,10 +180,10 @@ const Index = () => {
                   />
                   <div>
                     <h4 className="font-semibold text-gray-900">Emma Rodriguez</h4>
-                    <p className="text-sm text-gray-600">Design Student</p>
+                    <p className="text-sm text-gray-600">Mahasiswa Desain</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"The real projects feature helped me build an impressive portfolio. I landed my dream internship thanks to SkillSwap!"</p>
+                <p className="text-gray-700 italic">"Fitur proyek nyata membantu saya membangun portofolio yang mengesankan. Saya mendapatkan magang impian berkat SkillSwap!"</p>
               </CardContent>
             </Card>
           </div>
@@ -193,75 +194,75 @@ const Index = () => {
       <section id="pricing" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
-            <p className="text-xl text-gray-600">Start free and upgrade as you grow</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Pilih Paket Anda</h2>
+            <p className="text-xl text-gray-600">Mulai gratis dan upgrade seiring berkembang</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="border-2 hover:border-blue-300 transition-all duration-300 relative">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-bold text-gray-900">Free Plan</CardTitle>
-                <CardDescription className="text-gray-600">Perfect for getting started</CardDescription>
+                <CardTitle className="text-2xl font-bold text-gray-900">Paket Gratis</CardTitle>
+                <CardDescription className="text-gray-600">Sempurna untuk memulai</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-gray-900">$0</span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-4xl font-bold text-gray-900">Rp0</span>
+                  <span className="text-gray-600">/bulan</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center">✓ Basic community access</li>
-                  <li className="flex items-center">✓ Limited skill exchanges</li>
-                  <li className="flex items-center">✓ Basic profile features</li>
-                  <li className="flex items-center">✓ Community forums</li>
+                  <li className="flex items-center">✓ Akses komunitas dasar</li>
+                  <li className="flex items-center">✓ Pertukaran keterampilan terbatas</li>
+                  <li className="flex items-center">✓ Fitur profil dasar</li>
+                  <li className="flex items-center">✓ Forum komunitas</li>
                 </ul>
-                <Button className="w-full mt-6" variant="outline">Get Started Free</Button>
+                <Button className="w-full mt-6" variant="outline">Mulai Gratis</Button>
               </CardContent>
             </Card>
             
             <Card className="border-2 border-blue-500 hover:border-blue-600 transition-all duration-300 relative scale-105 shadow-lg">
               <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                Most Popular
+                Paling Populer
               </Badge>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-bold text-gray-900">Pro Plan</CardTitle>
-                <CardDescription className="text-gray-600">For serious learners</CardDescription>
+                <CardTitle className="text-2xl font-bold text-gray-900">Paket Pro</CardTitle>
+                <CardDescription className="text-gray-600">Untuk pelajar serius</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-gray-900">$19</span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-4xl font-bold text-gray-900">Rp299</span>
+                  <span className="text-gray-600">/bulan</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center">✓ Premium mentor access</li>
-                  <li className="flex items-center">✓ Unlimited skill exchanges</li>
-                  <li className="flex items-center">✓ Real project assignments</li>
-                  <li className="flex items-center">✓ Gamification features</li>
-                  <li className="flex items-center">✓ Priority support</li>
+                  <li className="flex items-center">✓ Akses mentor premium</li>
+                  <li className="flex items-center">✓ Pertukaran keterampilan tak terbatas</li>
+                  <li className="flex items-center">✓ Tugas proyek nyata</li>
+                  <li className="flex items-center">✓ Fitur gamifikasi</li>
+                  <li className="flex items-center">✓ Dukungan prioritas</li>
                 </ul>
                 <Button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  Start Pro Trial
+                  Mulai Uji Coba Pro
                 </Button>
               </CardContent>
             </Card>
             
             <Card className="border-2 hover:border-purple-300 transition-all duration-300 relative">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-bold text-gray-900">Team Plan</CardTitle>
-                <CardDescription className="text-gray-600">For study groups & universities</CardDescription>
+                <CardTitle className="text-2xl font-bold text-gray-900">Paket Tim</CardTitle>
+                <CardDescription className="text-gray-600">Untuk kelompok belajar & universitas</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-gray-900">$49</span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-4xl font-bold text-gray-900">Rp799</span>
+                  <span className="text-gray-600">/bulan</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center">✓ Everything in Pro</li>
-                  <li className="flex items-center">✓ Team management tools</li>
-                  <li className="flex items-center">✓ Advanced analytics</li>
-                  <li className="flex items-center">✓ Custom integrations</li>
-                  <li className="flex items-center">✓ Dedicated support</li>
+                  <li className="flex items-center">✓ Semua fitur Pro</li>
+                  <li className="flex items-center">✓ Alat manajemen tim</li>
+                  <li className="flex items-center">✓ Analitik lanjutan</li>
+                  <li className="flex items-center">✓ Integrasi kustom</li>
+                  <li className="flex items-center">✓ Dukungan khusus</li>
                 </ul>
-                <Button className="w-full mt-6" variant="outline">Contact Sales</Button>
+                <Button className="w-full mt-6" variant="outline">Hubungi Penjualan</Button>
               </CardContent>
             </Card>
           </div>
@@ -271,12 +272,12 @@ const Index = () => {
       {/* Final CTA Section */}
       <section id="signup" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Learning?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Siap Mengubah Cara Belajar Anda?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join thousands of students who are already accelerating their skills with SkillSwap. Start your journey today!
+            Bergabunglah dengan ribuan mahasiswa yang sudah mempercepat keterampilan mereka dengan SkillSwap. Mulai perjalanan Anda hari ini!
           </p>
           <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-4 text-lg font-semibold">
-            Start Learning Today!
+            Mulai Belajar Hari Ini!
           </Button>
         </div>
       </section>
@@ -294,29 +295,29 @@ const Index = () => {
                 />
                 <span className="text-xl font-bold">SkillSwap</span>
               </div>
-              <p className="text-gray-400">Connecting students for collaborative learning and skill development.</p>
+              <p className="text-gray-400">Menghubungkan mahasiswa untuk pembelajaran kolaboratif dan pengembangan keterampilan.</p>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">Perusahaan</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Tentang</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Karir</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
+              <h4 className="font-semibold mb-4">Dukungan</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Pusat Bantuan</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Syarat Layanan</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Follow Us</h4>
+              <h4 className="font-semibold mb-4">Ikuti Kami</h4>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram size={24} />
@@ -332,7 +333,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+            <p>&copy; 2024 SkillSwap. Hak cipta dilindungi.</p>
           </div>
         </div>
       </footer>
