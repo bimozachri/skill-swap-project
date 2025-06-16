@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -64,13 +63,13 @@ const RegisterRequest = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-4">
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-4">
             <Button 
               variant="ghost" 
               size="sm" 
-              className="text-white hover:bg-blue-500"
+              className="text-white hover:bg-white/20"
               onClick={() => navigate('/skill-exchange')}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -89,10 +88,10 @@ const RegisterRequest = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8 max-w-2xl">
-        <Card>
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-2xl text-blue-700">
-              <Search className="w-6 h-6" />
+            <CardTitle className="flex items-center gap-2 text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <Search className="w-6 h-6 text-blue-600" />
               Daftarkan Permintaan Belajar
             </CardTitle>
             <p className="text-gray-600">
@@ -110,6 +109,7 @@ const RegisterRequest = () => {
                   placeholder="Contoh: Belajar Fotografi Portrait"
                   value={formData.title}
                   onChange={handleInputChange}
+                  className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -121,7 +121,7 @@ const RegisterRequest = () => {
                   </label>
                   <select
                     name="category"
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={formData.category}
                     onChange={handleInputChange}
                     required
@@ -141,7 +141,7 @@ const RegisterRequest = () => {
                   </label>
                   <select
                     name="level"
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={formData.level}
                     onChange={handleInputChange}
                     required
@@ -162,7 +162,7 @@ const RegisterRequest = () => {
                 </label>
                 <textarea
                   name="description"
-                  className="w-full p-3 border border-gray-300 rounded-md resize-none"
+                  className="w-full p-3 border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   rows={4}
                   placeholder="Jelaskan apa yang ingin Anda pelajari, tingkat kemampuan saat ini, dan harapan Anda..."
                   value={formData.description}
@@ -181,6 +181,7 @@ const RegisterRequest = () => {
                     placeholder="Contoh: Rp 200.000/bulan"
                     value={formData.budget}
                     onChange={handleInputChange}
+                    className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
 
@@ -193,6 +194,7 @@ const RegisterRequest = () => {
                     placeholder="Contoh: 3 bulan"
                     value={formData.timeline}
                     onChange={handleInputChange}
+                    className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -204,7 +206,7 @@ const RegisterRequest = () => {
                 </label>
                 <select
                   name="learningStyle"
-                  className="w-full p-2 border border-gray-300 rounded-md"
+                  className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   value={formData.learningStyle}
                   onChange={handleInputChange}
                   required
@@ -224,7 +226,7 @@ const RegisterRequest = () => {
                 </label>
                 <textarea
                   name="goals"
-                  className="w-full p-3 border border-gray-300 rounded-md resize-none"
+                  className="w-full p-3 border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   rows={3}
                   placeholder="Apa yang ingin Anda capai setelah mempelajari keterampilan ini?"
                   value={formData.goals}
@@ -233,9 +235,9 @@ const RegisterRequest = () => {
                 />
               </div>
 
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-medium text-blue-800 mb-2">Yang Akan Terjadi Selanjutnya:</h3>
-                <ul className="text-sm text-blue-700 space-y-1">
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border border-blue-100">
+                <h3 className="font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">Yang Akan Terjadi Selanjutnya:</h3>
+                <ul className="text-sm text-gray-700 space-y-1">
                   <li>• Kami akan mencarikan mentor yang sesuai dengan kebutuhan Anda</li>
                   <li>• Mentor yang tertarik akan menghubungi Anda dalam 1-3 hari</li>
                   <li>• Anda dapat memilih mentor yang paling cocok</li>
@@ -247,14 +249,14 @@ const RegisterRequest = () => {
                 <Button
                   type="button"
                   variant="outline"
-                  className="flex-1"
+                  className="flex-1 border-gray-200"
                   onClick={() => navigate('/skill-exchange')}
                 >
                   Batal
                 </Button>
                 <Button
                   type="submit"
-                  className="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
+                  className="flex-1 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg"
                 >
                   Daftarkan Permintaan
                 </Button>

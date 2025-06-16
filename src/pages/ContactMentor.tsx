@@ -38,13 +38,13 @@ const ContactMentor = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-4">
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-4">
             <Button 
               variant="ghost" 
               size="sm" 
-              className="text-white hover:bg-blue-500"
+              className="text-white hover:bg-white/20"
               onClick={() => navigate('/skill-exchange')}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -66,12 +66,12 @@ const ContactMentor = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Mentor Profile */}
           <div className="lg:col-span-2 space-y-6">
-            <Card>
+            <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-blue-600">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         {mentorData.name.charAt(0)}
                       </span>
                     </div>
@@ -85,20 +85,20 @@ const ContactMentor = () => {
                       </div>
                     </div>
                   </div>
-                  <Badge className="bg-blue-100 text-blue-800">
+                  <Badge className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border-0">
                     {mentorData.category}
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <h2 className="text-xl font-semibold text-blue-600 mb-2">
+                <h2 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   {mentorData.title}
                 </h2>
                 <p className="text-gray-600 mb-4">{mentorData.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {mentorData.tags.map((tag, index) => (
-                    <Badge key={index} variant="outline">
+                    <Badge key={index} variant="outline" className="border-gray-200">
                       {tag}
                     </Badge>
                   ))}
@@ -136,10 +136,10 @@ const ContactMentor = () => {
 
           {/* Contact Form */}
           <div className="space-y-6">
-            <Card>
+            <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
+                <CardTitle className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <MessageCircle className="w-5 h-5 text-blue-600" />
                   Hubungi Mentor
                 </CardTitle>
               </CardHeader>
@@ -149,7 +149,7 @@ const ContactMentor = () => {
                     Pesan Anda
                   </label>
                   <textarea
-                    className="w-full p-3 border border-gray-300 rounded-md resize-none"
+                    className="w-full p-3 border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     rows={6}
                     placeholder="Tulis pesan Anda untuk mentor..."
                     value={message}
@@ -158,7 +158,7 @@ const ContactMentor = () => {
                 </div>
                 
                 <Button 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
                   onClick={handleSendMessage}
                   disabled={!message.trim()}
                 >
@@ -173,21 +173,21 @@ const ContactMentor = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Jadwal Tersedia</CardTitle>
+                <CardTitle className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Jadwal Tersedia</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                  <div className="flex justify-between items-center p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-100">
                     <span className="font-medium">Sabtu</span>
-                    <span className="text-green-600">Tersedia</span>
+                    <span className="text-green-600 font-medium">Tersedia</span>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                  <div className="flex justify-between items-center p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-100">
                     <span className="font-medium">Minggu</span>
-                    <span className="text-green-600">Tersedia</span>
+                    <span className="text-green-600 font-medium">Tersedia</span>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                  <div className="flex justify-between items-center p-3 bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg border border-gray-100">
                     <span className="font-medium">Senin-Jumat</span>
                     <span className="text-gray-600">Fleksibel</span>
                   </div>

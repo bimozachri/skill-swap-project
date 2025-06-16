@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,13 +55,13 @@ const AddSkill = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-4">
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-4">
             <Button 
               variant="ghost" 
               size="sm" 
-              className="text-white hover:bg-blue-500"
+              className="text-white hover:bg-white/20"
               onClick={() => navigate('/skill-exchange')}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -81,10 +80,10 @@ const AddSkill = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8 max-w-2xl">
-        <Card>
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-2xl text-blue-700">
-              <Plus className="w-6 h-6" />
+            <CardTitle className="flex items-center gap-2 text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <Plus className="w-6 h-6 text-blue-600" />
               Tambah Keterampilan Baru
             </CardTitle>
             <p className="text-gray-600">
@@ -102,6 +101,7 @@ const AddSkill = () => {
                   placeholder="Contoh: Belajar React untuk Pemula"
                   value={formData.title}
                   onChange={handleInputChange}
+                  className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -113,7 +113,7 @@ const AddSkill = () => {
                   </label>
                   <select
                     name="category"
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={formData.category}
                     onChange={handleInputChange}
                     required
@@ -133,7 +133,7 @@ const AddSkill = () => {
                   </label>
                   <select
                     name="level"
-                    className="w-full p-2 border border-gray-300 rounded-md"
+                    className="w-full p-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={formData.level}
                     onChange={handleInputChange}
                     required
@@ -154,7 +154,7 @@ const AddSkill = () => {
                 </label>
                 <textarea
                   name="description"
-                  className="w-full p-3 border border-gray-300 rounded-md resize-none"
+                  className="w-full p-3 border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   rows={4}
                   placeholder="Jelaskan apa yang akan dipelajari dan metode pengajaran Anda..."
                   value={formData.description}
@@ -172,6 +172,7 @@ const AddSkill = () => {
                   placeholder="Contoh: Sabtu & Minggu, 10:00-12:00"
                   value={formData.schedule}
                   onChange={handleInputChange}
+                  className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -185,6 +186,7 @@ const AddSkill = () => {
                   placeholder="Contoh: React, JavaScript, Frontend"
                   value={formData.tags}
                   onChange={handleInputChange}
+                  className="border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
 
@@ -194,7 +196,7 @@ const AddSkill = () => {
                 </label>
                 <textarea
                   name="requirements"
-                  className="w-full p-3 border border-gray-300 rounded-md resize-none"
+                  className="w-full p-3 border border-gray-200 rounded-md resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   rows={3}
                   placeholder="Apa yang perlu disiapkan peserta sebelum belajar..."
                   value={formData.requirements}
@@ -206,14 +208,14 @@ const AddSkill = () => {
                 <Button
                   type="button"
                   variant="outline"
-                  className="flex-1"
+                  className="flex-1 border-gray-200"
                   onClick={() => navigate('/skill-exchange')}
                 >
                   Batal
                 </Button>
                 <Button
                   type="submit"
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
                 >
                   Tambah Keterampilan
                 </Button>

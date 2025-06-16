@@ -38,21 +38,21 @@ const SkillCard: React.FC<SkillCardProps> = ({
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      'Pemrograman': 'bg-blue-100 text-blue-800',
-      'Desain': 'bg-purple-100 text-purple-800',
-      'Bahasa': 'bg-green-100 text-green-800',
-      'Musik': 'bg-yellow-100 text-yellow-800',
-      'Fotografi': 'bg-pink-100 text-pink-800',
-      'Akademik': 'bg-red-100 text-red-800'
+      'Pemrograman': 'bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800',
+      'Desain': 'bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800',
+      'Bahasa': 'bg-gradient-to-r from-green-100 to-green-200 text-green-800',
+      'Musik': 'bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800',
+      'Fotografi': 'bg-gradient-to-r from-pink-100 to-pink-200 text-pink-800',
+      'Akademik': 'bg-gradient-to-r from-red-100 to-red-200 text-red-800'
     };
-    return colors[category] || 'bg-gray-100 text-gray-800';
+    return colors[category] || 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800';
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:scale-105">
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
-          <Badge className={getCategoryColor(category)}>
+          <Badge className={getCategoryColor(category) + ' border-0'}>
             {category}
           </Badge>
           <div className="flex items-center gap-1">
@@ -60,7 +60,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
             <span className="text-sm font-medium">{rating}</span>
           </div>
         </div>
-        <CardTitle className="text-lg font-bold text-blue-600 hover:text-blue-800 cursor-pointer">
+        <CardTitle className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 cursor-pointer">
           {title}
         </CardTitle>
         <p className="text-gray-600 text-sm">{description}</p>
@@ -69,8 +69,8 @@ const SkillCard: React.FC<SkillCardProps> = ({
       <CardContent>
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-              <span className="text-xs font-medium">{mentor.name.charAt(0)}</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+              <span className="text-xs font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{mentor.name.charAt(0)}</span>
             </div>
             <div>
               <p className="font-medium">{mentor.name}</p>
@@ -91,14 +91,14 @@ const SkillCard: React.FC<SkillCardProps> = ({
           
           <div className="flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <Badge key={index} variant="outline" className="text-xs">
+              <Badge key={index} variant="outline" className="text-xs border-gray-200">
                 {tag}
               </Badge>
             ))}
           </div>
           
           <Button 
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
             onClick={() => navigate(`/contact-mentor/${id}`)}
           >
             Hubungi Mentor

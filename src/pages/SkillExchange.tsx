@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -113,7 +112,7 @@ const SkillExchange = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-4">
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -126,14 +125,14 @@ const SkillExchange = () => {
             </div>
             
             <nav className="hidden md:flex space-x-6">
-              <button onClick={() => navigate('/')} className="hover:text-blue-200 transition-colors">Home</button>
-              <button className="text-orange-300 font-medium">Pertukaran Keterampilan</button>
+              <button onClick={() => navigate('/')} className="hover:text-blue-200 transition-colors">Beranda</button>
+              <button className="text-yellow-300 font-medium">Pertukaran Keterampilan</button>
               <button className="hover:text-blue-200 transition-colors">Forum</button>
               <button className="hover:text-blue-200 transition-colors">Komunitas</button>
             </nav>
             
             <Button 
-              className="bg-orange-500 hover:bg-orange-600 text-white"
+              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg"
               onClick={() => navigate('/register-request')}
             >
               Tawarkan Keterampilan
@@ -150,17 +149,17 @@ const SkillExchange = () => {
             <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
             <Input
               placeholder="Cari keterampilan, topik, atau mentor..."
-              className="pl-10 py-6"
+              className="pl-10 py-6 border-gray-200 shadow-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <Button variant="outline" className="flex items-center gap-2">
+          <Button variant="outline" className="flex items-center gap-2 border-gray-200 shadow-sm">
             <Filter className="w-4 h-4" />
             Kategori
           </Button>
           <Button 
-            className="bg-orange-500 hover:bg-orange-600 text-white flex items-center gap-2"
+            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white flex items-center gap-2 shadow-lg"
             onClick={() => navigate('/add-skill')}
           >
             <Plus className="w-4 h-4" />
@@ -169,7 +168,7 @@ const SkillExchange = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-6 mb-8 border-b">
+        <div className="flex gap-6 mb-8 border-b border-gray-200">
           <button
             className={`pb-2 px-1 ${activeTab === 'available' ? 'border-b-2 border-blue-600 text-blue-600 font-medium' : 'text-gray-600'}`}
             onClick={() => setActiveTab('available')}
@@ -192,7 +191,7 @@ const SkillExchange = () => {
 
         {/* Results Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-blue-700">Keterampilan Tersedia</h2>
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Keterampilan Tersedia</h2>
           <span className="text-gray-600">{filteredSkills.length} hasil ditemukan</span>
         </div>
 
@@ -204,8 +203,8 @@ const SkillExchange = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-blue-700 mb-4">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl p-8 text-center border border-gray-100">
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Tidak menemukan keterampilan yang Anda cari?
           </h3>
           <p className="text-gray-600 mb-6">
@@ -213,7 +212,7 @@ const SkillExchange = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8"
+            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 shadow-lg"
             onClick={() => navigate('/register-request')}
           >
             Daftarkan Permintaan →
@@ -222,7 +221,7 @@ const SkillExchange = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8 mt-16">
+      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-16">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -234,14 +233,14 @@ const SkillExchange = () => {
               <span className="text-lg font-bold">SkillSwap</span>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-blue-200 transition-colors">About</a>
+              <a href="#" className="hover:text-blue-200 transition-colors">Tentang</a>
               <a href="#" className="hover:text-blue-200 transition-colors">Blog</a>
-              <a href="#" className="hover:text-blue-200 transition-colors">Help Center</a>
-              <a href="#" className="hover:text-blue-200 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-200 transition-colors">Pusat Bantuan</a>
+              <a href="#" className="hover:text-blue-200 transition-colors">Kebijakan Privasi</a>
             </div>
           </div>
-          <div className="mt-4 text-center text-blue-200">
-            <p>© 2025 SkillSwap. All rights reserved.</p>
+          <div className="mt-4 text-center text-gray-300">
+            <p>© 2025 SkillSwap. Hak cipta dilindungi.</p>
           </div>
         </div>
       </footer>
