@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -36,7 +37,7 @@ const ContactMentor = () => {
     toast({
       title: 'Pesan berhasil dikirim ke mentor!',
       description: 'Mentor biasanya merespons dalam 24 jam',
-      variant: 'success'
+      variant: 'default'
     });
     setMessage('');
   };
@@ -207,7 +208,7 @@ const ContactMentor = () => {
         <div className="mt-8">
           <GrowthHackingWidget 
             context="after-contact" 
-            skillTitle={skillsData?.title || "keterampilan ini"}
+            skillTitle={mentorData.title}
           />
         </div>
       </div>
