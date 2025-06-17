@@ -9,6 +9,7 @@ import SkillExchange from "./pages/SkillExchange";
 import ContactMentor from "./pages/ContactMentor";
 import AddSkill from "./pages/AddSkill";
 import RegisterRequest from "./pages/RegisterRequest";
+import ReferralProgram from "./pages/ReferralProgram";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/contact-mentor/:id" element={<ContactMentor />} />
           <Route path="/add-skill" element={<AddSkill />} />
           <Route path="/register-request" element={<RegisterRequest />} />
+          <Route path="/referral-program" element={<ReferralProgram />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

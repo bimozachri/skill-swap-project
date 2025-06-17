@@ -1,16 +1,18 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Star, Clock, Calendar, MessageCircle } from "lucide-react";
+import { ArrowLeft, Star, Clock, Calendar, Mail, Phone, MessageSquare, User } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import GrowthHackingWidget from '../components/GrowthHackingWidget';
 
 const ContactMentor = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [message, setMessage] = useState('');
+  const { toast } = useToast();
 
   // Mock data untuk mentor
   const mentorData = {
@@ -31,7 +33,11 @@ const ContactMentor = () => {
   const handleSendMessage = () => {
     // Logic untuk mengirim pesan
     console.log('Pesan dikirim:', message);
-    alert('Pesan berhasil dikirim ke mentor!');
+    toast({
+      title: 'Pesan berhasil dikirim ke mentor!',
+      description: 'Mentor biasanya merespons dalam 24 jam',
+      variant: 'success'
+    });
     setMessage('');
   };
 
@@ -139,7 +145,7 @@ const ContactMentor = () => {
             <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  <MessageCircle className="w-5 h-5 text-blue-600" />
+                  <MessageSquare className="w-5 h-5 text-blue-600" />
                   Hubungi Mentor
                 </CardTitle>
               </CardHeader>
@@ -195,6 +201,14 @@ const ContactMentor = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Growth Hacking Widget */}
+        <div className="mt-8">
+          <GrowthHackingWidget 
+            context="after-contact" 
+            skillTitle={skillsData?.title || "keterampilan ini"}
+          />
         </div>
       </div>
     </div>

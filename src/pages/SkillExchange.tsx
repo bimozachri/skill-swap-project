@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, Filter, Plus } from "lucide-react";
+import { Search, Filter, Plus, Users, Gift } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SkillCard from '../components/SkillCard';
 
